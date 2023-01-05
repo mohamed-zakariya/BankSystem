@@ -1,0 +1,17 @@
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\BankSystem.exe
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\BankSystem.deps.json
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\BankSystem.runtimeconfig.json
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\BankSystem.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\BankSystem.pdb
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.csproj.AssemblyReference.cache
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Form1.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.csproj.GenerateResource.cache
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.AssemblyInfoInputs.cache
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.AssemblyInfo.cs
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.csproj.CoreCompileInputs.cache
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\refint\BankSystem.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.pdb
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.genruntimeconfig.cache
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\ref\BankSystem.dll
