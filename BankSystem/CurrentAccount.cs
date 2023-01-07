@@ -10,14 +10,14 @@ namespace BankSystem
     {
         public CurrentAccount() { }
 
-        public CurrentAccount(int id, double balance, int password) : base(id, balance, password)
+        public CurrentAccount(Customer cust) : base(cust)
         {
 
         }
 
-        public void displayBalance()
+        public override double getBalance()
         {
-            Console.WriteLine(balance);
+            return Balance;
         }
     }
 }

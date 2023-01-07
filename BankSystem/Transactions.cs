@@ -18,11 +18,9 @@ namespace BankSystem
 
         }
 
-        public Transactions(double fee, double assets, double debt, int id, double balance, int password) : base(id, balance, password)
+        public Transactions(Customer cust) : base(cust)
         {
-            this.fee = fee;
-            this.debt = debt;
-            this.assets = assets;
+            
         }
 
 

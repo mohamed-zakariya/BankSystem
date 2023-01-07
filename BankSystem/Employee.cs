@@ -1,27 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BankSystem
 {
-    internal class Employee : Person
+    public  class Employee : Person
     {
-        int id;
-        int salary;
-        public int Id
-        {
-            get { return id; }
-            set
-            {
-                if (value > 0)
-                {
-                    id = value;
-                }
-            }
-        }
-        public int Salary
+        
+        double salary;
+       
+        public double Salary
         {
             get
             {
@@ -33,11 +26,40 @@ namespace BankSystem
         {
 
         }
-        public Employee(string Name, int Id_NN, int Age, string Address, int salary, int id) : base(Name, Id_NN, Age, Address)
+        public Employee(int id, string Name, string username, string password, int Age, string Address, int sec_lvl) : base( id,  Name,  username,  password,  Age,  Address,  sec_lvl)
         {
-            Salary = salary;
-            Id = id;
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            try
+            {
 
+                SqlCommand cmd = new SqlCommand("Select * from [dbo].[Table] where username = @username and password = @password", con);
+
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    this.salary = Convert.ToDouble(dr.GetValue(6));
+                    
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+           
         }
+
+
+    
+        
     }
 }

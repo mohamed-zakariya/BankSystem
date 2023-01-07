@@ -15,3 +15,13 @@ D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.pdb
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.genruntimeconfig.cache
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\ref\BankSystem.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Properties.Resources.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.csproj.CopyComplete
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Admin.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.User.resources
