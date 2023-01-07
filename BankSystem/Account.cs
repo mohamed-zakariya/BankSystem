@@ -31,9 +31,9 @@ namespace BankSystem
             try
             {
 
-                SqlCommand cmd = new SqlCommand("Select * from [dbo].[Table] where cust.Id1 = @id", con);
+                SqlCommand cmd = new SqlCommand("Select * from [dbo].[Table] where id = @Id", con);
 
-                cmd.Parameters.AddWithValue("@id", cust.Id1);
+                cmd.Parameters.AddWithValue("@Id", cust.Id1);
                
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();

@@ -95,9 +95,10 @@ namespace BankSystem
                     this.age = Convert.ToInt32(dr.GetValue(4));
                     this.address = dr.GetValue(5) + "";
                     this.sec_lvl = Convert.ToInt32(dr.GetValue(7));
+
                     if (this.sec_lvl == 0)
                     {
-                        return new Customer(this.id, this.name, this.username, this.password, this.age, this.address, this.sec_lvl);
+                        return new Customer(this.id, this.name, this.username, this.password, this.age, this.address, this.sec_lvl, Convert.ToInt32(dr.GetValue(8)));
                     }
                     else
                     {

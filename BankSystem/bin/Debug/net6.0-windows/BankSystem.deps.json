@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v6.0": {
       "BankSystem/1.0.0": {
         "dependencies": {
+          "FontAwesome.Sharp": "6.2.1",
           "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
           "BankSystem.dll": {}
+        }
+      },
+      "FontAwesome.Sharp/6.2.1": {
+        "runtime": {
+          "lib/net6.0-windows7.0/FontAwesome.Sharp.dll": {
+            "assemblyVersion": "6.2.1.0",
+            "fileVersion": "6.2.1.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
@@ -96,6 +105,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FontAwesome.Sharp/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eYpj85+70pOjV4cOfB/Et/Rj6m56WRlCKU2G4ivWCohb7sF7DwHz/3jy8XIWp9utgb/R2Pqm+HsaBwV33FBNbg==",
+      "path": "fontawesome.sharp/6.2.1",
+      "hashPath": "fontawesome.sharp.6.2.1.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",

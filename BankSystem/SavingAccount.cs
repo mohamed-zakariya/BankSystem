@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BankSystem
 {
-    internal class SavingAccount : Account
+    public class SavingAccount : Account
     {
 
-        public float annualInterest;
+        public float annualInterest = 0.4f;
 
 
 
