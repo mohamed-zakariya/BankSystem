@@ -41,6 +41,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.ChangePassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timer1
@@ -53,7 +54,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(454, 531);
+            this.label2.Location = new System.Drawing.Point(456, 612);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 28);
             this.label2.TabIndex = 3;
@@ -170,7 +171,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(40, 510);
+            this.button1.Location = new System.Drawing.Point(40, 591);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 49);
             this.button1.TabIndex = 10;
@@ -185,18 +186,34 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(-13, 515);
+            this.iconButton2.Location = new System.Drawing.Point(-13, 596);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(77, 39);
             this.iconButton2.TabIndex = 11;
             this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // ChangePassword
+            // 
+            this.ChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.ChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ChangePassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.ChangePassword.ForeColor = System.Drawing.Color.White;
+            this.ChangePassword.Location = new System.Drawing.Point(182, 531);
+            this.ChangePassword.Name = "ChangePassword";
+            this.ChangePassword.Size = new System.Drawing.Size(308, 47);
+            this.ChangePassword.TabIndex = 12;
+            this.ChangePassword.Text = "Change Password";
+            this.ChangePassword.UseVisualStyleBackColor = false;
+            this.ChangePassword.Click += new System.EventHandler(this.button2_Click);
             // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSalmon;
-            this.ClientSize = new System.Drawing.Size(705, 580);
+            this.ClientSize = new System.Drawing.Size(705, 652);
+            this.Controls.Add(this.ChangePassword);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -230,5 +247,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private Button button1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private Button ChangePassword;
     }
 }

@@ -50,6 +50,8 @@ namespace BankSystem
            deposite.Height, 50, 50));
             loan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, loan.Width,
            loan.Height, 50, 50));
+            ChangePassword.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ChangePassword.Width,
+            ChangePassword.Height, 50, 50));
         }
 
         
@@ -99,6 +101,11 @@ namespace BankSystem
             Transfer f6 = new Transfer(this, cust, account);
             f6.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

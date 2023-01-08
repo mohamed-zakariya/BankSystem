@@ -39,7 +39,21 @@ namespace BankSystem
            this.account_lvl = account_lvl;
         }
 
-        //public abstract void Cash_withdrawal(CurrentAccount accountc);
+        //public  bool changePassword(string newPassword)
+        //{
+        //    try
+        //    {
+
+        //    }catch(Exception ex)
+        //    {
+        //        return false;
+        //    }
+        //    finally
+        //    {
+
+        //    }
+        //}
+       
 
 
 
