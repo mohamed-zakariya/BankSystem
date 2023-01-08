@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,156 @@ namespace BankSystem
         {
             return balance += balance * (double)annualInterest / 12;
         }
-       
+
+        public override bool withdraw(double amount)
+        {
+        
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            try
+            {
+                
+                if (amount > this.Balance || amount < 0)
+                {
+                   
+                    throw new Exception();
+                }
+                this.Balance -= amount;
+                
+                SqlCommand cmd = new SqlCommand("update [dbo].[Table] set balance = @newbalance where id =" +this.Cust.Id1, con);
+
+                cmd.Parameters.AddWithValue("@newbalance", this.Balance);
+                
+
+
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                return true;
+
+            }
+
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return false;
+        }
+
+        public override bool deposit(double amount)
+        {
+
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            try
+            {
+
+                if (amount < 0)
+                {
+
+                    throw new Exception();
+                }
+                this.Balance += amount;
+
+                SqlCommand cmd = new SqlCommand("update [dbo].[Table] set balance = @newbalance where id =" + this.Cust.Id1, con);
+
+                cmd.Parameters.AddWithValue("@newbalance", this.Balance);
+
+
+
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                return true;
+
+            }
+
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return false;
+        }
+
+        double balance3;
+        public override bool transfer(double amount, string username)
+        {
+            bool flag = false;
+
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            try
+            {
+                if (this.Balance < 0 || this.Balance < amount)
+                    throw new Exception();
+
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("Select * from [dbo].[Table]", con);
+
+                SqlDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    if (rd[1].ToString() == username && rd[7].ToString() == "0")
+                    {
+                        balance3 = Convert.ToDouble(rd[6]);
+                        flag = true;
+                        break;
+                    }
+                }
+                con.Close();
+                if (flag)
+                {
+
+                    con.Open();
+                    cmd = new SqlCommand("update [dbo].[Table] set balance = @balance where username = @username", con);
+
+                    balance3 += amount;
+
+                    cmd.Parameters.AddWithValue("@balance", balance3);
+                    cmd.Parameters.AddWithValue("@username", username);
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    con.Open();
+                    cmd = new SqlCommand("update [dbo].[Table] set balance = @newbalance where username = @username", con);
+
+                    this.Balance -= amount;
+
+                    cmd.Parameters.AddWithValue("@newbalance", this.Balance);
+                    cmd.Parameters.AddWithValue("@username", this.Cust.Username);
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    return true;
+
+                }
+                else
+                {
+                    return false;
+                }
+
+                flag = false;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return false;
+        }
+
+
     }
 }

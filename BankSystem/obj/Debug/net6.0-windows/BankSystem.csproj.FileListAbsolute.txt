@@ -26,4 +26,6 @@ D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Admin.resources
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.User.resources
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Form4.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Deposit.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Withdraw.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Transfer.resources

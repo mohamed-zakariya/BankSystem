@@ -44,7 +44,7 @@ namespace BankSystem
                    if(p is Customer)
                     {   
                         Customer cust  = (Customer)p;
-                        User f3 = new(cust);
+                        User f3 = new(this, cust);
                         f3.Show();
                         this.Hide();
                             

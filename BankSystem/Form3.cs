@@ -14,7 +14,8 @@ namespace BankSystem
     public partial class User : Form
     {
         private Customer cust;
-
+        Account account;
+        Form1 f1;
         
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -25,11 +26,11 @@ namespace BankSystem
         {
             InitializeComponent();
         }
-        public User(Customer cust)
+        public User(Form1 f1,Customer cust)
         {
             InitializeComponent();
             this.cust = cust;
-            
+            this.f1 = f1;
             
         }
 
@@ -71,6 +72,33 @@ namespace BankSystem
                 Account account = new SavingAccount(cust);
                 MessageBox.Show(Convert.ToString(account.getBalance()));
             }
+        }
+
+        private void withdraw_Click(object sender, EventArgs e)
+        {
+            Withdraw f4 = new Withdraw(this, cust, account);
+            f4.Show();
+            this.Hide();
+        }
+
+        private void deposite_Click(object sender, EventArgs e)
+        {
+            Deposit f5 = new Deposit(this, cust, account);
+            f5.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            f1.Show();
+            this.Hide();
+        }
+
+        private void transfer_Click(object sender, EventArgs e)
+        {
+            Transfer f6 = new Transfer(this, cust, account);
+            f6.Show();
+            this.Hide();
         }
     }
 }

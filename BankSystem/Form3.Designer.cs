@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.checkBalance = new System.Windows.Forms.Button();
@@ -39,40 +36,12 @@
             this.deposite = new System.Windows.Forms.Button();
             this.loan = new System.Windows.Forms.Button();
             this.transfer = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(705, 78);
-            this.panel2.TabIndex = 2;
-            
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(560, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(25, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 28);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Hello";
             // 
             // timer1
             // 
@@ -83,6 +52,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label2.Location = new System.Drawing.Point(454, 531);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 28);
@@ -115,6 +85,7 @@
             this.withdraw.TabIndex = 5;
             this.withdraw.Text = "Withdraw";
             this.withdraw.UseVisualStyleBackColor = false;
+            this.withdraw.Click += new System.EventHandler(this.withdraw_Click);
             // 
             // deposite
             // 
@@ -128,6 +99,7 @@
             this.deposite.TabIndex = 6;
             this.deposite.Text = "Deposite";
             this.deposite.UseVisualStyleBackColor = false;
+            this.deposite.Click += new System.EventHandler(this.deposite_Click);
             // 
             // loan
             // 
@@ -155,6 +127,69 @@
             this.transfer.TabIndex = 9;
             this.transfer.Text = "Transfer";
             this.transfer.UseVisualStyleBackColor = false;
+            this.transfer.Click += new System.EventHandler(this.transfer_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label1.Location = new System.Drawing.Point(72, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Hello";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label3.Location = new System.Drawing.Point(558, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 28);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "label3";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(12, 12);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(52, 60);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(40, 510);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 49);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Sign out";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(-13, 515);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(77, 39);
+            this.iconButton2.TabIndex = 11;
+            this.iconButton2.UseVisualStyleBackColor = true;
             // 
             // User
             // 
@@ -162,33 +197,38 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSalmon;
             this.ClientSize = new System.Drawing.Size(705, 580);
+            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.transfer);
             this.Controls.Add(this.loan);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.deposite);
             this.Controls.Add(this.withdraw);
             this.Controls.Add(this.checkBalance);
-            this.Controls.Add(this.panel2);
+            this.ForeColor = System.Drawing.Color.DarkSalmon;
             this.Name = "User";
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Panel panel2;
-        private Label label1;
         private System.Windows.Forms.Timer timer1;
         private Label label2;
-        private Label label3;
         private Button checkBalance;
         private Button withdraw;
         private Button deposite;
         private Button loan;
         private Button transfer;
+        private Label label1;
+        private Label label3;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private Button button1;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }
