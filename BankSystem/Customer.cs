@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,21 +40,55 @@ namespace BankSystem
            this.account_lvl = account_lvl;
         }
 
-        //public  bool changePassword(string newPassword)
-        //{
-        //    try
-        //    {
+        public bool changePassword(string oldPassword, string newPassword)
+        {
+            bool flag = false;
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            try
+            {
+                if (oldPassword == "" || oldPassword == newPassword || newPassword == "")
+                    throw new Exception();
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from [dbo].[Table] where id = " + this.Id1, con);
 
-        //    }catch(Exception ex)
-        //    {
-        //        return false;
-        //    }
-        //    finally
-        //    {
+                SqlDataReader rd = cmd.ExecuteReader();
 
-        //    }
-        //}
-       
+                while(rd.Read())
+                {   
+                    if (rd[2].ToString() == oldPassword)
+                    {
+                        //MessageBox.Show(rd[2].ToString() + " " + oldPassword);
+                        flag = true;
+                        break;
+                    }
+                }
+                con.Close();
+                if (flag)
+                {
+                    //MessageBox.Show(newPassword + " " + this.Username);
+                    cmd = new SqlCommand("update [dbo].[Table] set password = @password where id = "  + this.Id1, con);
+                    
+                    cmd.Parameters.AddWithValue("@password", newPassword);
+                    con.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close() ;
+            }
+            return false;
+        }
+
 
 
 

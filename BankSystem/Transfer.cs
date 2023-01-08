@@ -43,7 +43,7 @@ namespace BankSystem
                     }
 
                     else
-                        label5.Text = "Enter valid amount";
+                        label5.Text = "Enter Valid Data";
                 }
                 else
                 {
@@ -58,12 +58,12 @@ namespace BankSystem
                     }
 
                     else
-                        label5.Text = "Enter valid amount";
+                        label5.Text = "Enter Valid Data";
                 }
             }
             catch (Exception ex)
             {
-                label5.Text = "Enter valid amount";
+                label5.Text = "Enter Valid Data";
             }
         }
 

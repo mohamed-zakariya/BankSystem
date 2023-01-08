@@ -103,9 +103,11 @@ namespace BankSystem
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ChangePassword_Click(object sender, EventArgs e)
         {
-
+            ChangePassword f7 = new ChangePassword(this, cust);
+            f7.Show();
+            this.Hide();
         }
     }
 }

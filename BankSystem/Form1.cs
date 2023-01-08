@@ -74,40 +74,9 @@ namespace BankSystem
             Application.Exit();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
-}           //con.Open();
-            //SqlDataReader dr = cmd.ExecuteReader();
-
-//while (dr.Read())
-//{
-
-//    id = Convert.ToInt32(dr.GetValue(0));
-
-//    username = dr.GetString(1) + "";
-//    password = dr.GetString(2) + "";
-//    name = dr.GetString(3) + "";
-//    age = Convert.ToInt32(dr.GetValue(4));
-//    address = dr.GetString(5) + "";
-//    balance = Convert.ToDouble(dr.GetString(6));
-//    sec_lvl = Convert.ToInt32(dr.GetValue(7));
-
-
-//}
-//if (sec_lvl + "" == "1")
-//{
-
-//    Admin f2 = new Admin();
-//    f2.Show();
-//    this.Hide();
-//}
-//else
-//{
-//    User f3 = new User();
-//    f3.Show();
-//    this.Hide();
-
-//}
+}         
