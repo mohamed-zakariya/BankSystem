@@ -7,6 +7,9 @@
     <Compile Update="CreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Deposit.cs">
       <SubType>Form</SubType>
     </Compile>

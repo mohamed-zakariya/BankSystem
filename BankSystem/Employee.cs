@@ -72,7 +72,6 @@ namespace BankSystem
                 {
                     if (rd[1].ToString() == username)
                     {
-                        MessageBox.Show("false");
                         return false;
                         break;
                     }
@@ -97,7 +96,6 @@ namespace BankSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message );
                 return false;
             }
             finally { con.Close(); }

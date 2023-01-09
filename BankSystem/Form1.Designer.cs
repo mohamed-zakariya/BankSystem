@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.Signin = new System.Windows.Forms.Button();
             this.Login = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -51,27 +50,13 @@
             this.label1.Text = "Welcome To Bank System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Signin
-            // 
-            this.Signin.BackColor = System.Drawing.SystemColors.Control;
-            this.Signin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Signin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Signin.ForeColor = System.Drawing.Color.Black;
-            this.Signin.Location = new System.Drawing.Point(630, 177);
-            this.Signin.Name = "Signin";
-            this.Signin.Size = new System.Drawing.Size(107, 38);
-            this.Signin.TabIndex = 2;
-            this.Signin.Text = "sign up";
-            this.Signin.UseVisualStyleBackColor = false;
-            this.Signin.Click += new System.EventHandler(this.Signin_Click);
-            // 
             // Login
             // 
             this.Login.BackColor = System.Drawing.SystemColors.Control;
             this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Login.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Login.ForeColor = System.Drawing.Color.Black;
-            this.Login.Location = new System.Drawing.Point(633, 280);
+            this.Login.Location = new System.Drawing.Point(571, 239);
             this.Login.Margin = new System.Windows.Forms.Padding(0);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(104, 38);
@@ -144,7 +129,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Login);
-            this.Controls.Add(this.Signin);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -158,7 +142,6 @@
 
         private Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Button Signin;
         private Button Login;
         private TextBox textBox1;
         private TextBox textBox2;

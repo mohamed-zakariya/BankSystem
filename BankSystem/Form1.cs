@@ -11,18 +11,6 @@ namespace BankSystem
             InitializeComponent();
         }
 
-        //private int id;
-        //private string username;
-        //private string password;
-        //private string name;
-        //private int age;
-        //private string address;
-        //private double balance;
-        //private int sec_lvl;
-
-
-
-
 
         private void Login_Click(object sender, EventArgs e)
         {
