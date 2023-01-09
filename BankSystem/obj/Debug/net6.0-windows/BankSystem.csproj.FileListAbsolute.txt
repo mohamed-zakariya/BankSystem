@@ -30,3 +30,4 @@ D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Withdraw.resources
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.Transfer.resources
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.ChangePassword.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.ShowTransactionscs.resources

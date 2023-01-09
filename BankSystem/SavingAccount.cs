@@ -31,26 +31,32 @@ namespace BankSystem
 
         public override bool withdraw(double amount)
         {
-        
+
             SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             try
             {
-                
                 if (amount > this.Balance || amount < 0)
-                {
-                   
                     throw new Exception();
-                }
                 this.Balance -= amount;
-                
-                SqlCommand cmd = new SqlCommand("update [dbo].[Table] set balance = @newbalance where id =" +this.Cust.Id1, con);
+
+                SqlCommand cmd = new SqlCommand("update [dbo].[Table] set balance = @newbalance where id = " + this.Cust.Id1, con);
 
                 cmd.Parameters.AddWithValue("@newbalance", this.Balance);
-                
 
 
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
+
+                con.Close();
+                cmd = new SqlCommand("INSERT INTO [dbo].[Transaction](id, operation, balance, amount,date) VALUES ( " + this.Cust.Id1 + ", @operation, @balance,@amount,@date)", con);
+
+                cmd.Parameters.AddWithValue("@operation", "Withdraw");
+                cmd.Parameters.AddWithValue("@balance", this.Balance);
+                cmd.Parameters.AddWithValue("@amount", amount);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString());
+
+                con.Open();
+                dr = cmd.ExecuteReader();
 
                 return true;
 
@@ -58,6 +64,7 @@ namespace BankSystem
 
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return false;
             }
             finally
@@ -66,7 +73,6 @@ namespace BankSystem
             }
             return false;
         }
-
         public override bool deposit(double amount)
         {
 
@@ -76,7 +82,6 @@ namespace BankSystem
 
                 if (amount < 0)
                 {
-
                     throw new Exception();
                 }
                 this.Balance += amount;
@@ -90,6 +95,16 @@ namespace BankSystem
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
 
+                con.Close();
+                cmd = new SqlCommand("INSERT INTO [dbo].[Transaction](id, operation, balance, amount,date) VALUES ( " + this.Cust.Id1 + ", @operation, @balance,@amount,@date)", con);
+
+                cmd.Parameters.AddWithValue("@operation", "Deposit");
+                cmd.Parameters.AddWithValue("@balance", this.Balance);
+                cmd.Parameters.AddWithValue("@amount", amount);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString());
+
+                con.Open();
+                dr = cmd.ExecuteReader();
                 return true;
 
             }
@@ -156,6 +171,18 @@ namespace BankSystem
 
                     cmd.ExecuteNonQuery();
                     con.Close();
+
+
+
+                    cmd = new SqlCommand("INSERT INTO [dbo].[Transaction](id, operation, balance, amount,date) VALUES ( " + this.Cust.Id1 + ", @operation, @balance,@amount,@date)", con);
+
+                    cmd.Parameters.AddWithValue("@operation", "Transfer");
+                    cmd.Parameters.AddWithValue("@balance", this.Balance);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString());
+
+                    con.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
                     return true;
 
                 }

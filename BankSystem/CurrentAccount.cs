@@ -38,15 +38,26 @@ namespace BankSystem
 
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-              
+                
+                con.Close();
+                cmd = new SqlCommand("INSERT INTO [dbo].[Transaction](id, operation, balance, amount,date) VALUES ( " + this.Cust.Id1 + ", @operation, @balance,@amount,@date)" , con);
+                
+                cmd.Parameters.AddWithValue("@operation", "Withdraw");
+                cmd.Parameters.AddWithValue("@balance", this.Balance);
+                cmd.Parameters.AddWithValue("@amount", amount);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString());
+
+                con.Open();
+                dr = cmd.ExecuteReader();
+
                 return true;
 
             }
 
             catch (Exception ex)
             {
-         
-                return false; ;
+                MessageBox.Show(ex.Message)   ;      
+                return false; 
             }
             finally
             {
@@ -76,6 +87,16 @@ namespace BankSystem
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
 
+                con.Close();
+                cmd = new SqlCommand("INSERT INTO [dbo].[Transaction](id, operation, balance, amount,date) VALUES ( " + this.Cust.Id1 + ", @operation, @balance,@amount,@date)", con);
+
+                cmd.Parameters.AddWithValue("@operation", "Deposit");
+                cmd.Parameters.AddWithValue("@balance", this.Balance);
+                cmd.Parameters.AddWithValue("@amount", amount);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString());
+
+                con.Open();
+                dr = cmd.ExecuteReader();
                 return true;
 
             }
@@ -142,6 +163,18 @@ namespace BankSystem
 
                     cmd.ExecuteNonQuery();
                     con.Close();
+
+
+                    
+                    cmd = new SqlCommand("INSERT INTO [dbo].[Transaction](id, operation, balance, amount,date) VALUES ( " + this.Cust.Id1 + ", @operation, @balance,@amount,@date)", con);
+
+                    cmd.Parameters.AddWithValue("@operation", "Transfer");
+                    cmd.Parameters.AddWithValue("@balance", this.Balance);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString());
+
+                    con.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
                     return true;
 
                 }

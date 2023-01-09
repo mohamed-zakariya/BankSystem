@@ -33,8 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.checkBalance = new System.Windows.Forms.Button();
             this.withdraw = new System.Windows.Forms.Button();
-            this.deposite = new System.Windows.Forms.Button();
-            this.loan = new System.Windows.Forms.Button();
+            this.deposit = new System.Windows.Forms.Button();
+            this.ShowTransactions = new System.Windows.Forms.Button();
             this.transfer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,33 +88,34 @@
             this.withdraw.UseVisualStyleBackColor = false;
             this.withdraw.Click += new System.EventHandler(this.withdraw_Click);
             // 
-            // deposite
+            // deposit
             // 
-            this.deposite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.deposite.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deposite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deposite.ForeColor = System.Drawing.Color.White;
-            this.deposite.Location = new System.Drawing.Point(182, 312);
-            this.deposite.Name = "deposite";
-            this.deposite.Size = new System.Drawing.Size(308, 47);
-            this.deposite.TabIndex = 6;
-            this.deposite.Text = "Deposite";
-            this.deposite.UseVisualStyleBackColor = false;
-            this.deposite.Click += new System.EventHandler(this.deposite_Click);
+            this.deposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.deposit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deposit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deposit.ForeColor = System.Drawing.Color.White;
+            this.deposit.Location = new System.Drawing.Point(182, 312);
+            this.deposit.Name = "deposit";
+            this.deposit.Size = new System.Drawing.Size(308, 47);
+            this.deposit.TabIndex = 6;
+            this.deposit.Text = "Deposit";
+            this.deposit.UseVisualStyleBackColor = false;
+            this.deposit.Click += new System.EventHandler(this.deposite_Click);
             // 
-            // loan
+            // ShowTransactions
             // 
-            this.loan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.loan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.loan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.loan.ForeColor = System.Drawing.Color.White;
-            this.loan.Location = new System.Drawing.Point(182, 457);
-            this.loan.Name = "loan";
-            this.loan.Size = new System.Drawing.Size(308, 47);
-            this.loan.TabIndex = 7;
-            this.loan.Text = "Take Loan";
-            this.loan.UseVisualStyleBackColor = false;
+            this.ShowTransactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.ShowTransactions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ShowTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ShowTransactions.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.ShowTransactions.ForeColor = System.Drawing.Color.White;
+            this.ShowTransactions.Location = new System.Drawing.Point(182, 457);
+            this.ShowTransactions.Name = "ShowTransactions";
+            this.ShowTransactions.Size = new System.Drawing.Size(308, 47);
+            this.ShowTransactions.TabIndex = 7;
+            this.ShowTransactions.Text = "Show Transactions";
+            this.ShowTransactions.UseVisualStyleBackColor = false;
+            this.ShowTransactions.Click += new System.EventHandler(this.ShowTransactions_Click);
             // 
             // transfer
             // 
@@ -219,10 +220,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.transfer);
-            this.Controls.Add(this.loan);
+            this.Controls.Add(this.ShowTransactions);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.deposite);
+            this.Controls.Add(this.deposit);
             this.Controls.Add(this.withdraw);
             this.Controls.Add(this.checkBalance);
             this.ForeColor = System.Drawing.Color.DarkSalmon;
@@ -239,8 +240,8 @@
         private Label label2;
         private Button checkBalance;
         private Button withdraw;
-        private Button deposite;
-        private Button loan;
+        private Button deposit;
+        private Button ShowTransactions;
         private Button transfer;
         private Label label1;
         private Label label3;

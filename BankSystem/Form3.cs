@@ -46,10 +46,10 @@ namespace BankSystem
              transfer.Height, 50, 50));
             withdraw.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, withdraw.Width,
            withdraw.Height, 50, 50));
-            deposite.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, deposite.Width,
-           deposite.Height, 50, 50));
-            loan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, loan.Width,
-           loan.Height, 50, 50));
+            deposit.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, deposit.Width,
+           deposit.Height, 50, 50));
+            ShowTransactions.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ShowTransactions.Width,
+           ShowTransactions.Height, 50, 50));
             ChangePassword.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ChangePassword.Width,
             ChangePassword.Height, 50, 50));
         }
@@ -107,6 +107,13 @@ namespace BankSystem
         {
             ChangePassword f7 = new ChangePassword(this, cust);
             f7.Show();
+            this.Hide();
+        }
+
+        private void ShowTransactions_Click(object sender, EventArgs e)
+        {
+            ShowTransactionscs f8 = new ShowTransactionscs(this, cust, account);
+            f8.Show();
             this.Hide();
         }
     }
