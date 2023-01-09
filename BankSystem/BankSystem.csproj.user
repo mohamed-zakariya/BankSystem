@@ -4,6 +4,9 @@
     <Compile Update="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Deposit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,6 +23,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Withdraw.cs">

@@ -49,17 +49,65 @@ namespace BankSystem
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
             }
             finally
             {
                 con.Close();
+            }   
+        }
+
+        public bool createUser(string username, string password, string name, int age, string address, double balance, int account_lvl)
+        {
+
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select * from [dbo].[Table] where username = @username", con);
+                cmd.Parameters.AddWithValue("@username", username);
+
+                con.Open();
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    if (rd[1].ToString() == username)
+                    {
+                        MessageBox.Show("false");
+                        return false;
+                        break;
+                    }
+                }
+                con.Close();
+                
+                cmd = new SqlCommand("INSERT INTO [dbo].[Table] (username, password, name, age, address, balance, sec_lvl, account_lvl) VALUES (@username, @password, @name, @age, @address, @balance, @sec_lvl, @account_lvl)", con);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@age", age);
+                cmd.Parameters.AddWithValue("@address", address);
+                cmd.Parameters.AddWithValue("@balance", balance);
+                cmd.Parameters.AddWithValue("@sec_lvl", 0);
+                cmd.Parameters.AddWithValue("@account_lvl", account_lvl);
+                
+                con.Open();
+                rd = cmd.ExecuteReader();
+                return true;
+
+
             }
-           
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message );
+                return false;
+            }
+            finally { con.Close(); }
+            return false;
+
         }
 
 
-    
-        
+
+
+
     }
 }

@@ -11,14 +11,14 @@ namespace BankSystem
             InitializeComponent();
         }
 
-        private int id;
-        private string username;
-        private string password;
-        private string name;
-        private int age;
-        private string address;
-        private double balance;
-        private int sec_lvl;
+        //private int id;
+        //private string username;
+        //private string password;
+        //private string name;
+        //private int age;
+        //private string address;
+        //private double balance;
+        //private int sec_lvl;
 
 
 
@@ -51,7 +51,9 @@ namespace BankSystem
                     }
                    else if (p is Employee) {
                         Employee emp = (Employee)p;
-                        Admin f2 = new(emp);
+                        Admin f2 = new(this, emp);
+                        f2.Show();
+                        this.Hide();
                     }
                 }
                 else

@@ -192,6 +192,7 @@
             this.iconButton2.Size = new System.Drawing.Size(77, 39);
             this.iconButton2.TabIndex = 11;
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // ChangePassword
             // 
