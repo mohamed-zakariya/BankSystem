@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C# problems\\Project\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj": {}
+    "D:\\C# problems\\project2\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj": {}
   },
   "projects": {
-    "D:\\C# problems\\Project\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj": {
+    "D:\\C# problems\\project2\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# problems\\Project\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj",
+        "projectUniqueName": "D:\\C# problems\\project2\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj",
         "projectName": "BankSystem",
-        "projectPath": "D:\\C# problems\\Project\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj",
+        "projectPath": "D:\\C# problems\\project2\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj",
         "packagesPath": "C:\\Users\\Kimo Store\\.nuget\\packages\\",
-        "outputPath": "D:\\C# problems\\Project\\BankSystem\\BankSystem\\BankSystem\\obj\\",
+        "outputPath": "D:\\C# problems\\project2\\BankSystem\\BankSystem\\BankSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

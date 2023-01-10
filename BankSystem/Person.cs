@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BankSystem
 {
-    public  class Person
+    public class Person
     {
         private int id;
         private string username;
@@ -17,6 +17,8 @@ namespace BankSystem
         private int age;
         private string address;
         private int sec_lvl;
+        private string phonenum;
+        private string mail;
 
         public int Id
         {
@@ -58,11 +60,21 @@ namespace BankSystem
             get { return sec_lvl; }
             set { sec_lvl = value; }
         }
+        public string Phonenum
+        {
+            get { return phonenum; }
+            set { phonenum = value; }
+        }
+        public string Mail
+        {
+            get { return mail; }
+            set { mail = value; }
+        }
         public Person()
         {
 
         }
-        public Person(int Id_NN, string Name, string username, string password, int Age, string Address, int sec_lvl)
+        public Person(int Id_NN, string Name, string username, string password, int Age, string Address, int sec_lvl, string Phonenum, string Mail)
         {
             this.username = username;
             this.password = password;
@@ -71,6 +83,8 @@ namespace BankSystem
             this.id = Id_NN;
             this.Age = Age;
             this.Address = Address;
+            this.Mail = Mail;
+            this.Phonenum = Phonenum;
         }
 
         public Person? loginCheck(string username, string password)
@@ -98,11 +112,11 @@ namespace BankSystem
 
                     if (this.sec_lvl == 0)
                     {
-                        return new Customer(this.id, this.name, this.username, this.password, this.age, this.address, this.sec_lvl, Convert.ToInt32(dr.GetValue(8)));
+                        return new Customer(this.id, this.name, this.username, this.password, this.age, this.address, this.sec_lvl, Convert.ToInt32(dr.GetValue(8)), this.phonenum, this.mail);
                     }
                     else
                     {
-                        return new Employee(this.id, this.name, this.username, this.password, this.age, this.address, this.sec_lvl);
+                        return new Employee(this.id, this.name, this.username, this.password, this.age, this.address, this.sec_lvl, this.phonenum, this.mail);
                     }
                 }
 
@@ -121,7 +135,7 @@ namespace BankSystem
         }
 
 
-        
+
     }
-    
+
 }

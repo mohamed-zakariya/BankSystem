@@ -25,6 +25,9 @@
     <Compile Update="ShowTransactionscs.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ShowUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Transfer.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BankSystem
 {
-    public  class Employee : Person
+    public class Employee : Person
     {
-        
+
         double salary;
-       
+
         public double Salary
         {
             get
@@ -26,7 +28,8 @@ namespace BankSystem
         {
 
         }
-        public Employee(int id, string Name, string username, string password, int Age, string Address, int sec_lvl) : base( id,  Name,  username,  password,  Age,  Address,  sec_lvl)
+
+        public Employee(int id, string Name, string username, string password, int Age, string Address, int sec_lvl, string Phonenum, string Mail) : base(id, Name, username, password, Age, Address, sec_lvl, Phonenum, Mail)
         {
             SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             try
@@ -42,22 +45,22 @@ namespace BankSystem
                 while (dr.Read())
                 {
                     this.salary = Convert.ToDouble(dr.GetValue(6));
-                    
+
                 }
 
             }
 
             catch (Exception ex)
             {
-                
+
             }
             finally
             {
                 con.Close();
-            }   
+            }
         }
 
-        public bool createUser(string username, string password, string name, int age, string address, double balance, int account_lvl)
+        public bool createUser(string username, string password, string name, int age, string address, double balance, int account_lvl, string phonenum, string mail)
         {
 
             SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -77,8 +80,8 @@ namespace BankSystem
                     }
                 }
                 con.Close();
-                
-                cmd = new SqlCommand("INSERT INTO [dbo].[Table] (username, password, name, age, address, balance, sec_lvl, account_lvl) VALUES (@username, @password, @name, @age, @address, @balance, @sec_lvl, @account_lvl)", con);
+
+                cmd = new SqlCommand("INSERT INTO [dbo].[Table] (username, password, name, age, address, balance, sec_lvl, account_lvl, phonenum, mail) VALUES (@username, @password, @name, @age, @address, @balance, @sec_lvl, @account_lvl,@phonenum,@mail)", con);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
                 cmd.Parameters.AddWithValue("@name", name);
@@ -87,7 +90,9 @@ namespace BankSystem
                 cmd.Parameters.AddWithValue("@balance", balance);
                 cmd.Parameters.AddWithValue("@sec_lvl", 0);
                 cmd.Parameters.AddWithValue("@account_lvl", account_lvl);
-                
+                cmd.Parameters.AddWithValue("@phonenum", phonenum);
+                cmd.Parameters.AddWithValue("@mail", mail);
+
                 con.Open();
                 rd = cmd.ExecuteReader();
                 return true;
@@ -103,7 +108,54 @@ namespace BankSystem
 
         }
 
+        //update
 
+        public void updateUser(string username, string address, int account_lvl, string phonenum, string mail)
+        {
+
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Update [Table] set address=@address,account_lvl=@account_lvl,phonenum=@phonenum,mail=@mail where username=@username", con);
+
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@address", address);
+            cmd.Parameters.AddWithValue("@account_lvl", account_lvl);
+            cmd.Parameters.AddWithValue("@phonenum", phonenum);
+            cmd.Parameters.AddWithValue("@mail", mail);
+
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+            MessageBox.Show("succfuly updated with new data");
+
+        }
+
+
+        //delte
+
+
+        public void deleteUser(string username)
+        {
+
+
+            string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Delete [Table] where  username=@username", con);
+
+            //cmd.Parameters.AddWithValue("@Id",Id);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+            MessageBox.Show("succfuly deleted the account");
+
+        }
+
+
+
+        //show in thr form show by pressing the button
 
 
 

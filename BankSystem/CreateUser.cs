@@ -28,8 +28,9 @@ namespace BankSystem
             this.emp = emp;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
+
             label2.Text = "";
             label3.Text = "";
             label4.Text = "";
@@ -43,7 +44,7 @@ namespace BankSystem
                 label2.Text = "enter user's username";
                 flag = true;
             }
-            if(textBox2.Text == "")
+            if (textBox2.Text == "")
             {
                 label3.Text = "enter user's password";
                 flag = true;
@@ -68,6 +69,21 @@ namespace BankSystem
                 label7.Text = "enter user's balance";
                 flag = true;
             }
+            if (textBox8.Text == "")
+            {
+                label10.Text = "enter user's phone number";
+                flag = true;
+            }
+            if (textBox7.Text == "")
+            {
+                label11.Text = "enter user's mail";
+                flag = true;
+            }
+            if (string.IsNullOrEmpty(comboBox1.Text))
+            {
+                label8.Text = "enter user's account type";
+                flag = true;
+            }
             if (string.IsNullOrEmpty(comboBox1.Text))
             {
                 label8.Text = "enter user's account type";
@@ -81,10 +97,10 @@ namespace BankSystem
             {
                 account_lvl = 1;
             }
-            if (!flag) 
+            if (!flag)
 
-            { 
-                if (emp.createUser(textBox1.Text, textBox2.Text, textBox3.Text, Convert.ToInt32(textBox4.Text), textBox5.Text, Convert.ToDouble(textBox6.Text), account_lvl))
+            {
+                if (emp.createUser(textBox1.Text, textBox2.Text, textBox3.Text, Convert.ToInt32(textBox4.Text), textBox5.Text, Convert.ToDouble(textBox6.Text), account_lvl, textBox8.Text, textBox7.Text))
                 {
                     label9.Text = "Sucessfully created";
                 }
@@ -94,11 +110,11 @@ namespace BankSystem
                 }
             }
             flag = false;
-
         }
 
-        private void iconButton8_Click(object sender, EventArgs e)
+        private void iconButton8_Click_1(object sender, EventArgs e)
         {
+
             f2.Show();
             this.Hide();
         }
