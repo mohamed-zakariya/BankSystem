@@ -9,6 +9,7 @@ namespace BankSystem
 {
     public class CurrentAccount : Account
     {
+        private float fee = 0.01f;
         public CurrentAccount() { }
 
         public CurrentAccount(Customer cust) : base(cust)
@@ -145,6 +146,7 @@ namespace BankSystem
                     con.Open();
                     cmd = new SqlCommand("update [dbo].[Table] set balance = @balance where username = @username", con);
 
+                    this.Balance -= this.Balance*fee;
                     balance3 += amount;
                     
                     cmd.Parameters.AddWithValue("@balance", balance3);

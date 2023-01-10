@@ -32,11 +32,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // label1
@@ -71,26 +71,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Amount";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightCoral;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(264, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 38);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Transfer";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // iconButton1
             // 
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.LightCoral;
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.Control;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(130)))), ((int)(((byte)(182)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.Location = new System.Drawing.Point(1, 192);
             this.iconButton1.Name = "iconButton1";
@@ -103,6 +89,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(130)))), ((int)(((byte)(182)))));
             this.label3.Location = new System.Drawing.Point(65, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 28);
@@ -113,6 +100,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(130)))), ((int)(((byte)(182)))));
             this.label4.Location = new System.Drawing.Point(162, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 28);
@@ -127,17 +115,31 @@
             this.label5.Size = new System.Drawing.Size(0, 20);
             this.label5.TabIndex = 11;
             // 
+            // iconButton2
+            // 
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.SystemColors.Control;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.MoneyBillTransfer;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(130)))), ((int)(((byte)(182)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(261, 113);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(94, 40);
+            this.iconButton2.TabIndex = 12;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
             // Transfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCoral;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(409, 245);
+            this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -156,10 +158,10 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label2;
-        private Button button1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Label label3;
         private Label label4;
         private Label label5;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

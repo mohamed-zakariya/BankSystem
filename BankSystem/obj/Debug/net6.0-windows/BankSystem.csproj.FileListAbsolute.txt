@@ -33,3 +33,14 @@ D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.ShowTransactionscs.resources
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.CreateUser.resources
 D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.UpdateUser.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\obj\Debug\net6.0-windows\BankSystem.DeleteUser.resources
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Bunit.Core.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Authorization.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Components.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Metadata.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+D:\C# problems\Project\BankSystem\BankSystem\BankSystem\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
