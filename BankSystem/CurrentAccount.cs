@@ -30,6 +30,7 @@ namespace BankSystem
             {
                 if (amount > this.Balance || amount < 0)
                     throw new Exception();
+
                 this.Balance -= amount;
                
                 SqlCommand cmd = new SqlCommand("update [dbo].[Table] set balance = @newbalance where id = " + this.Cust.Id1, con);
@@ -41,7 +42,7 @@ namespace BankSystem
                 SqlDataReader dr = cmd.ExecuteReader();
                 
                 con.Close();
-                cmd = new SqlCommand("INSERT INTO [dbo].[Transaction](id, operation, balance, amount,date) VALUES ( " + this.Cust.Id1 + ", @operation, @balance,@amount,@date)" , con);
+                cmd = new SqlCommand("INSERT INTO [dbo].[Transaction](id, operation, balance, amount, date) VALUES ( " + this.Cust.Id1 + ", @operation, @balance, @amount, @date)" , con);
                 
                 cmd.Parameters.AddWithValue("@operation", "Withdraw");
                 cmd.Parameters.AddWithValue("@balance", this.Balance);

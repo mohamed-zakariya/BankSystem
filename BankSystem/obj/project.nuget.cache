@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NgIEqjvgEBu2W7pTguJgac74+P/sfhj58svDT4y/xoU1kHtzu9HJzDrUcQ7pWlMjtVJWYMj7amcMq7x9pucFnA==",
+  "dgSpecHash": "OBgNtMkNxHVOAtbdFR0npN1QeDgood7XFSPBv15WZ7vvi77Na2Y0N6ZJiVS0WtItLSN/LTaEohhjqjVBFmlHKg==",
   "success": true,
-  "projectFilePath": "D:\\C# problems\\project2\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj",
+  "projectFilePath": "D:\\C# problems\\Finalized\\BankSystem\\BankSystem\\BankSystem\\BankSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kimo Store\\.nuget\\packages\\bunit.core\\1.13.5\\bunit.core.1.13.5.nupkg.sha512",
     "C:\\Users\\Kimo Store\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512",

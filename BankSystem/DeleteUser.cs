@@ -35,7 +35,7 @@ namespace BankSystem
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             label2.Text = "";
 
@@ -57,5 +57,7 @@ namespace BankSystem
             }
             flag = false;
         }
+
+       
     }
 }

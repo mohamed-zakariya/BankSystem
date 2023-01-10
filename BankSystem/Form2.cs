@@ -64,7 +64,7 @@ namespace BankSystem
 
         private void Admin_Load_1(object sender, EventArgs e)
         {
-            label1.Text = "Hello MR" + " " + emp.Name;
+            label1.Text = "Hello, " + " " + emp.Name;
         }
     }
 }
