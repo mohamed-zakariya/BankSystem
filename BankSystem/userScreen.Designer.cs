@@ -46,6 +46,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -244,12 +245,25 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(788, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 38);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "X";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(835, 652);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ChangePassword);
             this.Controls.Add(this.label3);
@@ -260,7 +274,9 @@
             this.Controls.Add(this.withdraw);
             this.Controls.Add(this.checkBalance);
             this.ForeColor = System.Drawing.Color.DarkSalmon;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "User";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
             this.panel1.ResumeLayout(false);
@@ -288,5 +304,6 @@
         private System.Windows.Forms.Timer timer2;
         private Panel panel1;
         private PictureBox pictureBox1;
+        private Label label6;
     }
 }

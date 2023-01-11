@@ -58,6 +58,9 @@ namespace BankSystem
             flag = false;
         }
 
-       
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

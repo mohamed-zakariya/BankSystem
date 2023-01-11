@@ -14,13 +14,13 @@ namespace BankSystem
     {
 
         private Employee emp;
-        Form1 f1;
+        loginForm f1;
         public Admin()
         {
             InitializeComponent();
         }
 
-        public Admin(Form1 f1, Employee emp)
+        public Admin(loginForm f1, Employee emp)
         {
             InitializeComponent();
             this.emp = emp;
@@ -44,7 +44,7 @@ namespace BankSystem
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            ShowUser f12 = new ShowUser(this, emp);
+            ShowData f12 = new ShowData(this, emp);
             f12.Show();
             this.Hide();
         }
@@ -65,6 +65,11 @@ namespace BankSystem
         private void Admin_Load_1(object sender, EventArgs e)
         {
             label1.Text = "Hello, " + " " + emp.Name;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

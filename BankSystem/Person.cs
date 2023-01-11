@@ -109,6 +109,8 @@ namespace BankSystem
                     this.age = Convert.ToInt32(dr.GetValue(4));
                     this.address = dr.GetValue(5) + "";
                     this.sec_lvl = Convert.ToInt32(dr.GetValue(7));
+                    this.phonenum = dr.GetValue(9) + "";
+                    this.mail = dr.GetValue(10) + "";
 
                     if (this.sec_lvl == 0)
                     {

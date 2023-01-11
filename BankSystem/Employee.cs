@@ -155,7 +155,59 @@ namespace BankSystem
 
 
 
-        //show in thr form show by pressing the button
+        //show Data
+
+        public Customer? showData(string username)
+        {
+            bool flag = false;
+            int account_lvl = 0;
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
+            try
+            {
+                if (username == null)
+                    throw new Exception();
+
+                SqlCommand cmd = new SqlCommand("select * from [dbo].[Table] where username = @username and sec_lvl = 0", con);
+                cmd.Parameters.AddWithValue("@username", username);
+                con.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (dr[1].ToString() == username)
+                    {
+                        Id = Convert.ToInt32(dr.GetValue(0));
+                        Username = dr.GetValue(1) + "";
+                        Password = dr.GetValue(2) + "";
+                        Name = dr.GetValue(3) + "";
+                        Age = Convert.ToInt32(dr.GetValue(4));
+                        Address = dr.GetValue(5) + "";
+                        Sec_lvl = Convert.ToInt32(dr.GetValue(7));
+                        account_lvl = Convert.ToInt32(dr.GetValue(8));
+                        Phonenum = dr.GetValue(9) + "";
+                        Mail = dr.GetValue(10) + "";
+
+                        flag = true;
+                    }
+                }
+                if (flag)
+                {
+                    return new Customer(Id, Name, Username, Password, Age, Address, Sec_lvl, account_lvl, Phonenum, Mail);
+                }
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
 
 
 

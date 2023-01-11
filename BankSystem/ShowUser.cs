@@ -42,6 +42,7 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             flag = false;
 
             SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BankSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -59,7 +60,7 @@ namespace BankSystem
                 }
             }
             con.Close();
-            if(flag)
+            if (flag)
             {
                 con.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -74,7 +75,11 @@ namespace BankSystem
                 MessageBox.Show("username not found");
             }
 
-            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

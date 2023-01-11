@@ -118,5 +118,10 @@ namespace BankSystem
             f2.Show();
             this.Hide();
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

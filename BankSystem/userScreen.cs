@@ -15,7 +15,7 @@ namespace BankSystem
     {
         private Customer cust;
         Account account;
-        Form1 f1;
+        loginForm f1;
         
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -26,7 +26,7 @@ namespace BankSystem
         {
             InitializeComponent();
         }
-        public User(Form1 f1,Customer cust)
+        public User(loginForm f1,Customer cust)
         {
             InitializeComponent();
             this.cust = cust;
@@ -122,6 +122,10 @@ namespace BankSystem
             f1.Show();
             this.Hide();
         }
-        
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

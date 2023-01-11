@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -116,12 +117,25 @@
             this.iconButton2.TabIndex = 8;
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(130)))), ((int)(((byte)(182)))));
+            this.label6.Location = new System.Drawing.Point(362, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 38);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "X";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Withdraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(409, 245);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
@@ -129,7 +143,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Withdraw";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
@@ -146,5 +162,6 @@
         private Button button1;
         private Label label5;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private Label label6;
     }
 }

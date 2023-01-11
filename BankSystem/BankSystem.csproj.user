@@ -13,13 +13,16 @@
     <Compile Update="Deposit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form2.cs">
+    <Compile Update="adminScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form3.cs">
+    <Compile Update="ShowData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="userScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ShowTransactionscs.cs">
