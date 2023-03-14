@@ -1,10 +1,21 @@
 # Banking System
 
 ## Overview
-It's an UI windows application, it splited into two parts Admins & Users first that  admins can add, delete and change setting in users as ->
+It's an UI windows application, it splited into two parts Admins & Users first that  admins can add, update, delete and show data of users as ->
 
+![Admins interface](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Admins%20interface.png)
 
-## are dealing with as users can show there balance, witdraw, deposit and other functionalities.
+### In adding user make sure to put data is not exist before or it will show warning also type the data in the right wording for instance: typing names in usernames and so on.
+
+![Add User](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Add%20user.png)
+
+![Update User](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Update%20user.png)
+
+![Delete User](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Delete%20User.png)
+
+![Show Data](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Show%20Data.png)
+
+## In the other part users can show there balance, witdraw, deposit and other functionalities.
 
 ![title](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Untitled.png)
 
