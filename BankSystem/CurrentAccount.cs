@@ -9,7 +9,7 @@ namespace BankSystem
 {
     public class CurrentAccount : Account
     {
-        private float fee = 0.01f;
+        private float fee = 0.01f;// transfer
         public CurrentAccount() { }
 
         public CurrentAccount(Customer cust) : base(cust)

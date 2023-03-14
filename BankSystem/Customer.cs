@@ -12,7 +12,7 @@ namespace BankSystem
 
         int id1;
 
-        int account_lvl;
+        int account_lvl;//cuurent account  or saving account 
 
         public int Account_lvl
         {

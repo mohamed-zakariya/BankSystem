@@ -73,5 +73,10 @@ namespace BankSystem
         {
             Application.Exit();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }         
