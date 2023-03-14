@@ -1,7 +1,10 @@
 # Banking System
 
 ## Overview
-It's an UI windows application that Admins/Users are dealing with as users can show there balance, witdraw, deposit and other functionalities. 
+It's an UI windows application, it splited into two parts Admins & Users first that  admins can add, delete and change setting in users as ->
+
+
+## are dealing with as users can show there balance, witdraw, deposit and other functionalities.
 
 ![title](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Untitled.png)
 
@@ -13,7 +16,7 @@ It's an UI windows application that Admins/Users are dealing with as users can s
 
 ![Deposit](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Deposite.png)
 
-#### one of functionality that user can do is tranfer money to other users and there is alertness that there 1% fine in this transaction
+#### ---> one of functionality that user can do is tranfer money to other users and there is alertness that there 1% fine in this transaction
 
 ![Transfer](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Transfer.png)
 
@@ -22,4 +25,3 @@ It's an UI windows application that Admins/Users are dealing with as users can s
 ![Transaction table](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Transaction%20Table.png)
 
 ![Change password](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Change%20Password.png)
-
