@@ -3,12 +3,12 @@
 ![title](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Untitled.png)
 
 ## Overview
-It's an UI windows application, it splited into two parts Admins & Users first that  admins can add, update, delete and show data of users as ->
+It's an UI windows application, it splited into two parts Admins & Users first that  admins (Teller) who deals with the user and ask for info as for instance: making the account current/saving account also admins have the ability to add, update, delete and show data of users as ->
 
 
 ![Admins interface](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Admins%20interface.png)
 
-### In adding user make sure to put data is not exist before or it will show warning also type the data in the right wording for instance: typing names in usernames and so on.
+#### In adding user make sure to put data is not exist before or it will show warning also type the data in the right wording for instance: typing names in usernames and so on.
 
 ![Add User](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Add%20user.png)
 
@@ -18,7 +18,7 @@ It's an UI windows application, it splited into two parts Admins & Users first t
 
 ![Show Data](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Show%20Data.png)
 
-## In the other part users can show there balance, witdraw, deposit and other functionalities.
+#### In the other part users can show there balance, witdraw, deposit and other functionalities.
 
 ![User form](https://github.com/mohamed-zakariya/BankSystem/blob/mohamed-zakariya/desktop-tutorial/bankSystem%20photos/Untitled1.png)
 
